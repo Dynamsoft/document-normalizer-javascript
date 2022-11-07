@@ -1,0 +1,98 @@
+{
+  "name": "dynamsoft-document-normalizer",
+  "version": "1.0.10",
+  "description": "Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quadrilaterals (quads for short) such as document/table boundaries and more from images, then perform document normalization on the images in the detected quads. Document normalization includes a set of functions such as border cropping/deskewing/perspective correction/contrast and brightness adjustment, etc.",
+  "files": [
+    "/dist/*.js",
+    "/dist/*.mjs",
+    "/dist/*.html",
+    "/dist/*.wasm",
+    "/dist/**/*.d.ts",
+    "/Api Reference.url",
+    "/legal.txt",
+    "/samples.url"
+  ],
+  "homepage": "https://www.dynamsoft.com/document-normalizer/docs/programming/javascript/user-guide.html",
+  "main": "./dist/ddn.js",
+  "module": "./dist/ddn.esm.js",
+  "exports": {
+    "import": "./dist/ddn.esm.js",
+    "require": "./dist/ddn.js"
+  },
+  "types": "./dist/types/ddn.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build-dev": "rollup -c --environment BUILD:development",
+    "build": "rollup -c --environment BUILD:production",
+    "update:readme": "node ./updateReadme.js"
+  },
+  "keywords": [
+    "HTML5 document capture",
+    "JavaScript document capture",
+    "Web document capture",
+    "document capture",
+    "normalization",
+    "border cropping",
+    "deskewing",
+    "perspective correction",
+    "contrast adjustment",
+    "brightness adjustment",
+    "WebAssembly",
+    "SDK"
+  ],
+  "author": {
+    "name": "Dynamsoft",
+    "url": "https://www.dynamsoft.com"
+  },
+  "~~publishConfig": {
+    "registry": "http://npm.scannerproxy.com/"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dynamsoft/document-normalizer-javascript.git"
+  },
+  "maintainers": [
+    {
+      "name": "Dynamsoft",
+      "email": "support@dynamsoft.com"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@rollup/plugin-node-resolve": "13.0.5",
+    "@rollup/plugin-replace": "3.0.0",
+    "@rollup/plugin-typescript": "8.3.0",
+    "@types/node": "16.11.2",
+    "@types/node-fetch": "2.6.1",
+    "@types/node-localstorage": "1.3.0",
+    "detect-browser-node-ssr": "^2.0.0",
+    "dlsjs": "http://npm.scannerproxy.com/dlsjs/-/dlsjs-1.0.41.tgz",
+    "dm-browser-info": "http://npm.scannerproxy.com/dm-browser-info/-/dm-browser-info-1.0.7.tgz",
+    "dm-curscript-path": "http://npm.scannerproxy.com/dm-curscript-path/-/dm-curscript-path-1.0.3.tgz",
+    "dynamsoft-camera-enhancer": "3.1.0",
+    "inline-css": "^4.0.1",
+    "markdown-styles": "^3.2.0",
+    "mutable-promise": "1.1.13",
+    "rollup": "2.58.0",
+    "rollup-plugin-terser": "7.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "node-fetch": "^2.6.5",
+    "node-localstorage": "^2.2.1"
+  },
+  "peerDependenciesMeta": {
+    "node-fetch": {
+      "optional": true
+    },
+    "node-localstorage": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "dm-howler": "^2.2.4"
+  }
+}
