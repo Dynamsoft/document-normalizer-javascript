@@ -52,40 +52,27 @@ The complete code of the example is shown below:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.10/dist/ddn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.11/dist/ddn.js"></script>
 </head>
-
 <body>
     <h1>Capture A Document</h1>
     <button id="confirmQuadForNormalization">Edit Boundaries</button>
     <button id="normalizeWithConfirmedQuad">Normalize and Capture</button>
-    <div id="div-ui-container" style="margin-top: 10px;height: 500px;"></div>
+    <div id="div-ui-container" style="margin-top: 10px;height: 70vh;"></div>
     <div id="normalized-result"></div>
     <script>
         let normalizer = null;
         let cameraEnhancer = null;
 
-        /** LICENSE ALERT - README
-         * To use the library, you need to first specify a license key using the API "license" as shown below.
-        */
+        // You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=ddn&package=js to get your own trial license good for 30 days.
         Dynamsoft.DDN.DocumentNormalizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
-        /**
-         * You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=ddn&package=js to get your own trial license good for 30 days.
-         * For more information, see https://www.dynamsoft.com/document-normalizer/docs/programming/javascript/user-guide.html?ver=1.0.10&utm_source=github#specify-the-license or contact support@dynamsoft.com.
-         * LICENSE ALERT - THE END
-        */
 
         (async function() {
-          try {
             cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
             normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
-            let options = {
-              resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-            };
-            await normalizer.setImageSource(cameraEnhancer, options);
+            await normalizer.setImageSource(cameraEnhancer, { resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem });
 
             await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
             
@@ -101,32 +88,17 @@ The complete code of the example is shown below:
 
             // Click the button to normalize with the selected/adjusted quadrilateral.
             document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
-              try {
-                const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
-                if(normalizedImageResult) {
-                  // Show the normalized image in a Canvas
-                  const cvs = normalizedImageResult.image.toCanvas();
-                  document.querySelector("#normalized-result").appendChild(cvs);
-                  console.log(normalizedImageResult);
-                }
-              } catch(ex) {
-                alert(ex.message || ex);
+              const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
+              if(normalizedImageResult) {
+                // Show the normalized image in a Canvas
+                const cvs = normalizedImageResult.image.toCanvas();
+                document.querySelector("#normalized-result").appendChild(cvs);
+                console.log(normalizedImageResult);
               }
             });
-
             // Start scanning document boundaries.
             await normalizer.startScanning(true);
-          } catch (ex) {
-            let errMsg;
-            if (ex.message.includes("network connection error")) {
-              errMsg = "Failed to connect to Dynamsoft License Server: network connection error. Check your Internet connection or contact Dynamsoft Support (support@dynamsoft.com) to acquire an offline license.";
-            } else {
-              errMsg = ex.message||ex;
-            }
-            alert(errMsg);
-            console.error(errMsg);
-          }
-        })();
+          })();
     </script>
 </body>
 
@@ -134,7 +106,7 @@ The complete code of the example is shown below:
 ```
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/3ojhuyz6/" title="Run via JSFiddle">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/5vgh7rdx/" title="Run via JSFiddle">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
@@ -159,7 +131,7 @@ The complete code of the example is shown below:
 
 Create a text file with the name "Normalize-Video-Frames.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a quadrilateral border to detect it.
 
-> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/3ojhuyz6/](https://jsfiddle.net/DynamsoftTeam/3ojhuyz6/)
+> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/5vgh7rdx/](https://jsfiddle.net/DynamsoftTeam/5vgh7rdx/)
 
 Please note:
 
@@ -182,14 +154,14 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 - jsDeliv
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.10/dist/ddn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.11/dist/ddn.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
   ```
 
 - UNPKG
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.10/dist/ddn.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.11/dist/ddn.js"></script>
   <script src="https://unpkg.com/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
   ```
 
@@ -204,19 +176,19 @@ To download the SDK:
 - yarn
 
   ```cmd
-  yarn add dynamsoft-document-normalizer@1.0.10
+  yarn add dynamsoft-document-normalizer@1.0.11
   ```
 
 - npm
 
   ```cmd
-  npm install dynamsoft-document-normalizer@1.0.10
+  npm install dynamsoft-document-normalizer@1.0.11
   ```
 
 Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
-  <script src="/dynamsoft-document-normalizer-js-1.0.10/dist/ddn.js"></script>
+  <script src="/dynamsoft-document-normalizer-js-1.0.11/dist/ddn.js"></script>
   ```
 
 or
@@ -251,7 +223,7 @@ If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are NOT in the 
 
 ```javascript
 // The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
-Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.10/dist/";
+Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.11/dist/";
 ```
 
 ### Interact with the SDK
@@ -261,6 +233,7 @@ Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/
 To use the SDK, we first create a `DocumentNormalizer` object.
 
 ```javascript
+Dynamsoft.DDN.DocumentNormalizer.license = "YOUR-LICENSE-KEY";
 let normalizer = null;
 try {
     normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
@@ -308,7 +281,7 @@ await normalizer.updateScanSettings(scanSettings);
 // Sets up the runtime settings
 let runtimeSettings = await normalizer.getRuntimeSettings();
 runtimeSettings.ImageParameterArray[0].BinarizationModes[0].ThresholdCompensation = 3;
-runtimeSettings.ImageParameterArray[0].ScaleDownThreshold = 500;
+runtimeSettings.ImageParameterArray[0].ScaleDownThreshold = 512;
 await normalizer.setRuntimeSettings(runtimeSettings);
 
 // or uses a built-in runtime setting template "lowcontrast"
@@ -343,19 +316,15 @@ document.getElementById('confirmQuadForNormalization').addEventListener("click",
 
 // Click the button to normalize with the selected/adjusted quadrilateral.
 document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
-  try {
-    const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
-    if(normalizedImageResult) {
-      // Show the normalized image in a Canvas
-      const cvs = normalizedImageResult.image.toCanvas();
-      document.querySelector("#normalized-result").appendChild(cvs);
-      console.log(normalizedImageResult);
-    }
-  } catch(ex) {
-    alert(ex.message || ex);
+  const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
+  if(normalizedImageResult) {
+    // Show the normalized image in a Canvas
+    const cvs = normalizedImageResult.image.toCanvas();
+    document.querySelector("#normalized-result").appendChild(cvs);
+    console.log(normalizedImageResult);
   }
 });
-// Start video scanning.
+// Start scanning document boundaries.
 await normalizer.startScanning(true);
 ```
 

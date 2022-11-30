@@ -1,7 +1,7 @@
 {
   "name": "dynamsoft-document-normalizer",
-  "version": "1.0.10",
-  "description": "Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quadrilaterals (quads for short) such as document/table boundaries and more from images, then perform document normalization on the images in the detected quads. Document normalization includes a set of functions such as border cropping/deskewing/perspective correction/contrast and brightness adjustment, etc.",
+  "version": "1.0.11",
+  "description": "Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quadrilaterals (quads for short) such as document/table boundaries and more from images, then perform document normalization on the images in the detected quads.",
   "files": [
     "/dist/*.js",
     "/dist/*.mjs",
@@ -24,7 +24,9 @@
   "scripts": {
     "build-dev": "rollup -c --environment BUILD:development",
     "build": "rollup -c --environment BUILD:production",
-    "update:readme": "node ./updateReadme.js"
+    "compress-glue-js": "terser public/ddn_wasm_glue.js -c computed_props=false -o dist/ddn_wasm_glue.js",
+    "update:readme": "node ./updateReadme.js",
+    "compress": "node ./compressCore.js"
   },
   "keywords": [
     "HTML5 document capture",
@@ -77,6 +79,7 @@
     "mutable-promise": "1.1.13",
     "rollup": "2.58.0",
     "rollup-plugin-terser": "7.0.2",
+    "terser": "^5.15.1",
     "tslib": "^2.4.0",
     "typescript": "^4.3.5"
   },
