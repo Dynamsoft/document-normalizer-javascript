@@ -24,7 +24,7 @@ export default class DocumentNormalizer {
      * ```
      * For convenience, you can set `license` in `script` tag instead.
      * ```html
-     * <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.11/dist/ddn.js" data-license="PRODUCT-KEYS"></script>
+     * <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.12/dist/ddn.js" data-license="PRODUCT-KEYS"></script>
      * ```
     */
     static set license(license: string);
@@ -84,7 +84,7 @@ export default class DocumentNormalizer {
      * If the auto-explored engine location is incorrect, you can manually specify the engine location.
      * The property needs to be set before [[loadWasm]].
      * ```js
-     * Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.11/dist/";
+     * Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.12/dist/";
      * await Dynamsoft.DDN.DocumentNormalizer.loadWasm();
      * ```
     */
@@ -114,12 +114,6 @@ export default class DocumentNormalizer {
       * @category Initialize and Destroy
     */
     static isWasmLoaded(): boolean;
-    /** @ignore */
-    static isDSImage(value: any): boolean;
-    /** @ignore */
-    static isImageSource(value: any): boolean;
-    /** @ignore */
-    static isDCEFrame(value: any): boolean;
     private callbackCameraChange?;
     private callbackResolutionChange?;
     private callbackCameraClose?;
@@ -232,17 +226,22 @@ export default class DocumentNormalizer {
      * Detect quadrilaterals which are object boundaries found on the source image.
      * @param source Specifies the image to process. If passed a string, it means a URL.
     */
-    detectQuad(source: Blob | DSImage | DCEFrame | HTMLImageElement | HTMLCanvasElement | string): Promise<Array<DetectedQuadResult>>;
+    detectQuad(source: Blob | DSImage | DCEFrame | HTMLImageElement | HTMLCanvasElement | string, makeACopy?: Boolean): Promise<Array<DetectedQuadResult>>;
     /**
-     * @param blob
+     * @param dceFrame
      * @ignore
     */
-    private _detectQuad_Blob;
+    private _detectQuad_DCEFrame;
     /**
      * @param dsImage
      * @ignore
     */
     private _detectQuad_DSImage;
+    /**
+     * @param blob
+     * @ignore
+    */
+    private _detectQuad_Blob;
     /**
      * @param image
      * @ignore
@@ -253,11 +252,6 @@ export default class DocumentNormalizer {
      * @ignore
     */
     private _detectQuad_Canvas;
-    /**
-     * @param dceFrame
-     * @ignore
-    */
-    private _detectQuad_DCEFrame;
     /**
      * @param url
      * @ignore
@@ -276,32 +270,38 @@ export default class DocumentNormalizer {
         quad?: Quadrilateral;
     }): Promise<NormalizedImageResult>;
     /**
-     * @param blob
-     * @ignore
-    */
-    private _normalize_Blob;
-    /**
-     * @param dsImage
-     * @ignore
-    */
-    private _normalize_DSImage;
-    /**
      * @param dceFrame
+     * @param quad
      * @ignore
     */
     private _normalize_DCEFrame;
     /**
+     * @param dsImage
+     * @param quad
+     * @ignore
+    */
+    private _normalize_DSImage;
+    /**
+     * @param blob
+     * @param quad
+     * @ignore
+    */
+    private _normalize_Blob;
+    /**
      * @param image
+     * @param quad
      * @ignore
     */
     private _normalize_Image;
     /**
      * @param canvas
+     * @param quad
      * @ignore
     */
     private _normalize_Canvas;
     /**
      * @param url
+     * @param quad
      * @ignore
     */
     private _normalize_Url;
@@ -318,7 +318,13 @@ export default class DocumentNormalizer {
     */
     private _getNorImgeData;
     getUIElement(): HTMLElement;
-    private _tempSolutionStatus;
+    /**
+     * _promiseStartScan.status == "pending"; // camera is openning.
+     * _promiseStartScan.status == "fulfilled"; // camera is opened.
+     * _promiseStartScan == null; // camera is closed.
+     * @ignore
+     */
+    private _promiseStartScan;
     startScanning(appendOrShowUI?: boolean): Promise<void>;
     stopScanning(hideUI?: boolean): void;
     /** @ignore */

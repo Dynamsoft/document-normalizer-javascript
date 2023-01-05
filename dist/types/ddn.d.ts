@@ -10,5 +10,6 @@ import { ImageSource } from "./interface/imagesource";
 import { NormalizedImageResult } from "./interface/normalizedimageresult";
 import { NormalizeImageDate } from "./interface/normalizeImageDate";
 import { ScanSettings } from "./interface/scansettings";
-export { DocumentNormalizer, EnumContentType, EnumDeskewMode, EnumImageColourMode, EnumQuadrilateralDetectionMode, DetectedQuadResult, DSImage, DDNImage, ImageSource, NormalizedImageResult, NormalizeImageDate, ScanSettings, };
+import { isDSImage, isImageSource, isDCEFrame } from "./utils";
+export { DocumentNormalizer, EnumContentType, EnumDeskewMode, EnumImageColourMode, EnumQuadrilateralDetectionMode, DetectedQuadResult, DSImage, DDNImage, ImageSource, NormalizedImageResult, NormalizeImageDate, ScanSettings, isDSImage, isImageSource, isDCEFrame };
 //# sourceMappingURL=ddn.d.ts.map
