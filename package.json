@@ -1,6 +1,6 @@
 {
   "name": "dynamsoft-document-normalizer",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quadrilaterals (quads for short) such as document/table boundaries and more from images, then perform document normalization on the images in the detected quads.",
   "files": [
     "/dist/*.js",
@@ -52,7 +52,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
     "url": "https://github.com/dynamsoft/document-normalizer-javascript.git"

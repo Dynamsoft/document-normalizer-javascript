@@ -2,7 +2,7 @@
 
 With Dynamsoft Document Normalizer JavaScript edition, you can add to your website the ability to take pictures of documents with your camera and normalize them to obtain high-quality images for further processing or archiving purposes.
 
-> Dynamsoft Document Normalizer v2.0.10 and above is based on Dynamsoft Capture Vision Architecture. To learn more, read [Introduction to Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/introduction/).
+> Dynamsoft Document Normalizer v2.0.11 and above is based on Dynamsoft Capture Vision Architecture. To learn more, read [Introduction to Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/introduction/).
 
 In this guide, you'll learn step-by-step how to build such a simple solution in a web page.
 
@@ -43,8 +43,8 @@ The following sample code sets up the SDK and implements boundary detection on a
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.10/dist/core.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.10/dist/utility.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.10/dist/ddn.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.10/dist/cvr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.0/dist/dce.js"></script>
 </head>
 
@@ -174,8 +174,8 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   ```html
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.10/dist/core.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.10/dist/utility.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.10/dist/ddn.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.10/dist/cvr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.0/dist/dce.js"></script>
   ```
 
@@ -184,8 +184,8 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   ```html
   <script src="https://unpkg.com/dynamsoft-core@3.0.10/dist/core.js"></script>
   <script src="https://unpkg.com/dynamsoft-utility@1.0.10/dist/utility.js"></script>
-  <script src="https://unpkg.com/dynamsoft-document-normalizer@2.0.10/dist/ddn.js"></script>
-  <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.0.10/dist/cvr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
+  <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
   <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.0/dist/dce.js"></script>
   ```
 
@@ -197,18 +197,18 @@ Options to download the SDK:
 
 - From the website
 
-  [Download the JavaScript ZIP package](https://www.dynamsoft.com/document-normalizer/downloads/?ver=2.0.10&utm_source=github)
+  [Download the JavaScript ZIP package](https://www.dynamsoft.com/document-normalizer/downloads/?ver=2.0.11&utm_source=github)
 
 - yarn
 
   ```cmd
-  yarn add dynamsoft-capture-vision-router@2.0.10
+  yarn add dynamsoft-capture-vision-router@2.0.11
   ```
 
 - npm
 
   ```cmd
-  npm install dynamsoft-capture-vision-router@2.0.10
+  npm install dynamsoft-capture-vision-router@2.0.11
   ```
 
 > Note: Upon installation of `dynamsoft-capture-vision-router`, the compatible versions of `dynamsoft-document-normalizer` and `dynamsoft-core` will be automatically downloaded.
@@ -217,11 +217,11 @@ Depending on how you downloaded the SDK and where you put it, you can typically 
 
   ```html
   <!-- Upon extracting the zip package into your project, you can generally include it in the following manner -->
-  <script src="./dynamsoft-document-normalizer-js-2.0.10/dynamsoft/distributables/dynamsoft-core@3.0.10/dist/core.js"></script>
-  <script src="./dynamsoft-document-normalizer-js-2.0.10/dynamsoft/distributables/dynamsoft-utility@1.0.10/dist/utility.js"></script>
-  <script src="./dynamsoft-document-normalizer-js-2.0.10/dynamsoft/distributables/dynamsoft-document-normalizer@2.0.10/dist/ddn.js"></script>
-  <script src="./dynamsoft-document-normalizer-js-2.0.10/dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.10/dist/cvr.js"></script>
-  <script src="./dynamsoft-document-normalizer-js-2.0.10/dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.0/dist/dce.js"></script>
+  <script src="./dynamsoft-document-normalizer-js-2.0.11/dynamsoft/distributables/dynamsoft-core@3.0.10/dist/core.js"></script>
+  <script src="./dynamsoft-document-normalizer-js-2.0.11/dynamsoft/distributables/dynamsoft-utility@1.0.10/dist/utility.js"></script>
+  <script src="./dynamsoft-document-normalizer-js-2.0.11/dynamsoft/distributables/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
+  <script src="./dynamsoft-document-normalizer-js-2.0.11/dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
+  <script src="./dynamsoft-document-normalizer-js-2.0.11/dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.0/dist/dce.js"></script>
   ```
 
 or
