@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 build
+templates
 /Test*
 
 # local env files
@@ -21,6 +22,7 @@ yarn-error.log*
 *.sln
 *.sw?
 *.map
+*.properties
 
 __pycache__
 ~~*
@@ -45,6 +47,7 @@ yarn.lock
 /Web.config
 /samples
 /temp
+/templates
 /public
 /original_model_files
 # /dce

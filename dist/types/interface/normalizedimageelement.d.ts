@@ -3,4 +3,4 @@ export interface NormalizedImageElement extends RegionObjectElement {
     imageData: DSImageData;
     referencedElement: RegionObjectElement;
 }
-//# sourceMappingURL=normalizedimageelement.d.ts.map
+//# sourceMappingURL=NormalizedImageElement.d.ts.map
