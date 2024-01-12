@@ -107,7 +107,7 @@ The following sample code sets up the SDK and implements boundary detection on a
 
   > The image source in our case is a CameraEnhancer object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(view)`
 
-  > In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, use the `CameraEnhancer` instance `cameraEnhancer`. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=4.0.0&utm_source=npm&product=ddn&package=js).
+  > In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, use the `CameraEnhancer` instance `cameraEnhancer`. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=4.0.0&utm_source=github&product=ddn&package=js).
 
 - `startCapturing("DetectDocumentBoundaries_Default")` : starts to run images through a pre-defined process which, in the case of "DetectDocumentBoundaries_Default", tries to find the boundary of a document present in the image(s).
 
@@ -127,7 +127,7 @@ Please note:
 
 - Although the page should work properly when opened directly as a file ("file:///"), it's recommended that you deploy it to a web server and access it via HTTPS.
 - On first use, you need to wait a few seconds for the SDK to initialize.
-- The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license good for 24 hours and requires network connection to work. To test the SDK further, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=npm&architecture=dcv&product=ddn&package=js).
+- The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license good for 24 hours and requires network connection to work. To test the SDK further, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&architecture=dcv&product=ddn&package=js).
 
 If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/customer-service/#contact).
 
@@ -197,7 +197,7 @@ Options to download the SDK:
 
 - From the website
 
-  [Download the JavaScript ZIP package](https://www.dynamsoft.com/document-normalizer/downloads/?ver=2.0.20&utm_source=npm)
+  [Download the JavaScript ZIP package](https://www.dynamsoft.com/document-normalizer/downloads/?ver=2.0.20&utm_source=github)
 
 - yarn
 
