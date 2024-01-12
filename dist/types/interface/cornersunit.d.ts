@@ -1,5 +1,10 @@
-import { Corner, IntermediateResultUnit } from "dynamsoft-core";
+import { Corner, IntermediateResultExtraInfo, IntermediateResultUnit } from "dynamsoft-core";
 export interface CornersUnit extends IntermediateResultUnit {
     corners: Array<Corner>;
 }
-//# sourceMappingURL=cornersunit.d.ts.map
+declare module "@dynamsoft/dynamsoft-capture-vision-router" {
+    interface IntermediateResultReceiver {
+        onCornersUnitReceived?: (result: CornersUnit, info: IntermediateResultExtraInfo) => void;
+    }
+}
+//# sourceMappingURL=CornersUnit.d.ts.map

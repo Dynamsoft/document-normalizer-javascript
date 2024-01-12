@@ -3,4 +3,4 @@ export interface DetectedQuadResultItem extends CapturedResultItem {
     location: Quadrilateral;
     confidenceAsDocumentBoundary: number;
 }
-//# sourceMappingURL=detectedquadresultitem.d.ts.map
+//# sourceMappingURL=DetectedQuadResultItem.d.ts.map
