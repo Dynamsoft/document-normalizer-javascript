@@ -7,4 +7,3 @@ export interface NormalizedImageResultItem extends CapturedResultItem {
     toBlob: (MIMEType: "image/png" | "image/jpeg") => Promise<Blob>;
     saveToFile: (name: string, download?: boolean) => Promise<File>;
 }
-//# sourceMappingURL=NormalizedImageResultItem.d.ts.map

@@ -5,7 +5,7 @@ export interface DetectedQuadsResult extends CapturedResult {
     readonly originalImageTag: ImageTag;
     quadsResultItems: Array<DetectedQuadResultItem>;
 }
-declare module "@dynamsoft/dynamsoft-capture-vision-router" {
+declare module "dynamsoft-capture-vision-router" {
     interface CapturedResultReceiver {
         onDetectedQuadsReceived?: (result: DetectedQuadsResult) => void;
     }
@@ -13,4 +13,3 @@ declare module "@dynamsoft/dynamsoft-capture-vision-router" {
         onDetectedQuadsReceived?: (result: DetectedQuadsResult) => void;
     }
 }
-//# sourceMappingURL=DetectedQuadsResult.d.ts.map
