@@ -5,7 +5,7 @@ export interface NormalizedImagesResult extends CapturedResult {
     readonly originalImageTag: ImageTag;
     normalizedImageResultItems: Array<NormalizedImageResultItem>;
 }
-declare module "@dynamsoft/dynamsoft-capture-vision-router" {
+declare module "dynamsoft-capture-vision-router" {
     interface CapturedResultReceiver {
         onNormalizedImagesReceived?: (result: NormalizedImagesResult) => void;
     }
@@ -13,4 +13,3 @@ declare module "@dynamsoft/dynamsoft-capture-vision-router" {
         onNormalizedImagesReceived?: (result: NormalizedImagesResult) => void;
     }
 }
-//# sourceMappingURL=NormalizedImagesResult.d.ts.map

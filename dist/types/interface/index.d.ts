@@ -10,4 +10,3 @@ export * from "./LongLinesUnit";
 export * from "./NormalizedImageElement";
 export * from "./NormalizedImagesResult";
 export * from "./NormalizedImagesUnit";
-//# sourceMappingURL=index.d.ts.map

@@ -1,3 +1,7 @@
+===================================================================================
+>>>>>>>>>>>>>>>>>>>>>>>>> dynamsoft-document-normalizer <<<<<<<<<<<<<<<<<<<<<<<<<<<
+===================================================================================
+
 Legal Notices:
 
 This SDK contains parts of following softwares which are used under license.
