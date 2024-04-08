@@ -1,6 +1,6 @@
 {
   "name": "dynamsoft-document-normalizer",
-  "version": "2.0.21",
+  "version": "2.2.10",
   "description": "Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quadrilaterals (quads for short) such as document/table boundaries and more from images, then perform document normalization on the images in the detected quads.",
   "files": [
     "/dist/*.js",
@@ -44,7 +44,9 @@
     "makeZip": "makeZip --package=dynamsoft-document-normalizer --version=auto --sampleBranch=_dev --structure=new --otherPkgs=dynamsoft-capture-vision-std dynamsoft-image-processing dynamsoft-core dynamsoft-license dynamsoft-capture-vision-router dynamsoft-utility",
     "makeZip_dev": "makeZip --package=dynamsoft-document-normalizer --version=auto --sampleBranch=_dev --structure=new --otherPkgs=@dynamsoft/dynamsoft-capture-vision-std @dynamsoft/dynamsoft-image-processing @dynamsoft/dynamsoft-core @dynamsoft/dynamsoft-license @dynamsoft/dynamsoft-capture-vision-router @dynamsoft/dynamsoft-utility",
     "easyPublish": "npm run update:dev && npm i @dynamsoft/dynamsoft-core@latest && npm run build && npm publish",
-    "ep-no-core": "npm run update:dev && npm run build && npm publish"
+    "ep-no-core": "npm run update:dev && npm run build && npm publish",
+    "overridesCore:prod": "npm pkg delete overrides.dynamsoft-core && npm pkg set dependencies.dynamsoft-core=\"^3.2.10\"",
+    "overridesCore:dev": "npm pkg set overrides.dynamsoft-core=$dynamsoft-core && npm pkg set dependencies.dynamsoft-core=npm:@dynamsoft/dynamsoft-core@latest && npm update dynamsoft-core --no-package-lock"
   },
   "keywords": [
     "HTML5 document capture",
@@ -80,7 +82,8 @@
     }
   ],
   "devDependencies": {
-    "@dynamsoft/rd2-scripts": "^0.1.4",
+    "@dynamsoft/dynamsoft-utility": "^1.2.10-dev-20240312132038",
+    "@dynamsoft/rd2-scripts": "^0.1.15",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.3",
@@ -89,9 +92,11 @@
     "@types/node": "^20.7.1",
     "dynamsoft-capture-vision-router": "^2.0.30",
     "rollup": "^2.79.1",
+    "tslib": "^2.6.2",
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "dynamsoft-core": "^3.0.30"
-  }
+    "dynamsoft-core": "^3.2.10"
+  },
+  "overrides": {}
 }

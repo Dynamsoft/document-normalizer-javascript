@@ -46,12 +46,12 @@ The following sample code sets up the SDK and implements boundary detection on a
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.30/dist/core.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.21/dist/utility.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.21/dist/ddn.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.30/dist/cvr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.2.10/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.2.10/dist/license.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.2.10/dist/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.2.10/dist/ddn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.10/dist/cvr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.2/dist/dce.js"></script>
 </head>
 
 <body>
@@ -171,23 +171,23 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 - jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.30/dist/core.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.21/dist/utility.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.21/dist/ddn.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.30/dist/cvr.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.2.10/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.2.10/dist/license.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.2.10/dist/utility.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.2.10/dist/ddn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.10/dist/cvr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.2/dist/dce.js"></script>
   ```
 
 - UNPKG
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-core@3.0.30/dist/core.js"></script>
-  <script src="https://unpkg.com/dynamsoft-license@3.0.20/dist/license.js"></script>
-  <script src="https://unpkg.com/dynamsoft-utility@1.0.21/dist/utility.js"></script>
-  <script src="https://unpkg.com/dynamsoft-document-normalizer@2.0.21/dist/ddn.js"></script>
-  <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.0.30/dist/cvr.js"></script>
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
+  <script src="https://unpkg.com/dynamsoft-core@3.2.10/dist/core.js"></script>
+  <script src="https://unpkg.com/dynamsoft-license@3.2.10/dist/license.js"></script>
+  <script src="https://unpkg.com/dynamsoft-utility@1.2.10/dist/utility.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-normalizer@2.2.10/dist/ddn.js"></script>
+  <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.2.10/dist/cvr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.2/dist/dce.js"></script>
   ```
 
 #### Host the SDK yourself
@@ -198,44 +198,44 @@ Options to download the SDK:
 
 - From the website
 
-  [Download the JavaScript ZIP package](https://www.dynamsoft.com/document-normalizer/downloads/?ver=2.0.21&utm_source=github)
+  [Download the JavaScript ZIP package](https://www.dynamsoft.com/document-normalizer/downloads/?ver=2.2.10&utm_source=github)
 
 - yarn
 
   ```cmd
-  yarn add dynamsoft-core@3.0.30 --save
-  yarn add dynamsoft-license@3.0.20 --save
-  yarn add dynamsoft-utility@1.0.21 --save
-  yarn add dynamsoft-document-normalizer@2.0.21 --save
-  yarn add dynamsoft-capture-vision-router@2.0.30 --save
-  yarn add dynamsoft-camera-enhancer@4.0.1 --save
-  yarn add dynamsoft-capture-vision-std@1.0.0 --save
-  yarn add dynamsoft-image-processing@2.0.30 --save
+  yarn add dynamsoft-core@3.2.10 --save
+  yarn add dynamsoft-license@3.2.10 --save
+  yarn add dynamsoft-utility@1.2.10 --save
+  yarn add dynamsoft-document-normalizer@2.2.10 --save
+  yarn add dynamsoft-capture-vision-router@2.2.10 --save
+  yarn add dynamsoft-camera-enhancer@4.0.2 --save
+  yarn add dynamsoft-capture-vision-std@1.2.0 --save
+  yarn add dynamsoft-image-processing@2.2.10 --save
   ```
 
 - npm
 
   ```cmd
-  npm install dynamsoft-core@3.0.30 --save
-  npm install dynamsoft-license@3.0.20 --save
-  npm install dynamsoft-utility@1.0.21 --save
-  npm install dynamsoft-document-normalizer@2.0.21 --save
-  npm install dynamsoft-capture-vision-router@2.0.30 --save
-  npm install dynamsoft-camera-enhancer@4.0.1 --save
-  npm install dynamsoft-capture-vision-std@1.0.0 --save
-  npm install dynamsoft-image-processing@2.0.30 --save
+  npm install dynamsoft-core@3.2.10 --save
+  npm install dynamsoft-license@3.2.10 --save
+  npm install dynamsoft-utility@1.2.10 --save
+  npm install dynamsoft-document-normalizer@2.2.10 --save
+  npm install dynamsoft-capture-vision-router@2.2.10 --save
+  npm install dynamsoft-camera-enhancer@4.0.2 --save
+  npm install dynamsoft-capture-vision-std@1.2.0 --save
+  npm install dynamsoft-image-processing@2.2.10 --save
   ```
 
 Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
   <!-- Upon extracting the zip package into your project, you can generally include it in the following manner -->
-  <script src="./dynamsoft/distributables/dynamsoft-core@3.0.30/dist/core.js"></script>
-  <script src="./dynamsoft/distributables/dynamsoft-license@3.0.20/dist/license.js"></script>
-  <script src="./dynamsoft/distributables/dynamsoft-utility@1.0.21/dist/utility.js"></script>
-  <script src="./dynamsoft/distributables/dynamsoft-document-normalizer@2.0.21/dist/ddn.js"></script>
-  <script src="./dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.30/dist/cvr.js"></script>
-  <script src="./dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-core@3.2.10/dist/core.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-license@3.2.10/dist/license.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-utility@1.2.10/dist/utility.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-document-normalizer@2.2.10/dist/ddn.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-capture-vision-router@2.2.10/dist/cvr.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.2/dist/dce.js"></script>
   ```
 
 or
@@ -257,14 +257,15 @@ The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.
 
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
-Dynamsoft.Core.CoreModule.engineResourcePaths.core = "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.30/dist/";
-Dynamsoft.Core.CoreModule.engineResourcePaths.license = "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/";
-Dynamsoft.Core.CoreModule.engineResourcePaths.ddn = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.21/dist/";
-Dynamsoft.Core.CoreModule.engineResourcePaths.cvr = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.30/dist/";
-Dynamsoft.Core.CoreModule.engineResourcePaths.dce = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/";
-Dynamsoft.Core.CoreModule.engineResourcePaths.std = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.0.0/dist/";
-Dynamsoft.Core.CoreModule.engineResourcePaths.dip = "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.0.30/dist/";
-Dynamsoft.Core.CoreModule.engineResourcePaths.utility = "https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.21/dist/";
+Object.assign(Dynamsoft.Core.CoreModule.engineResourcePaths, {
+  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.2.10/dist/",
+  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.2.10/dist/",
+  ddn: "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.2.10/dist/",
+  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.10/dist/",
+  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.2/dist/",
+  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.2.0/dist/",
+  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.2.10/dist/",
+});
 ```
 
 ### Define necessary HTML elements
@@ -374,12 +375,7 @@ async function startDetecting() {
       await router.startCapturing("DetectDocumentBoundaries_Default");
     })());
   } catch (ex) {
-    let errMsg;
-    if (ex.message.includes("network connection error")) {
-      errMsg = "Failed to connect to Dynamsoft License Server: network connection error. Check your Internet connection or contact Dynamsoft Support (support@dynamsoft.com) to acquire an offline license.";
-    } else {
-      errMsg = ex.message || ex;
-    }
+    let errMsg = ex.message || ex;
     console.error(errMsg);
     alert(errMsg);
   }
@@ -405,6 +401,8 @@ The steps of the workflow is as follows
 | **DetectDocumentBoundaries_Default**   | Detect document border on images.                 |
 | **NormalizeDocument_Default**          | Input an ROI and an image and normalize it.       |
 | **DetectAndNormalizeDocument_Default** | Detect document border on images and normalize it |
+
+Read more on the [preset CaptureVisionTemplates](./preset-templates.md).
 
 ### Review and adjust the boundary
 
@@ -445,7 +443,7 @@ async function handleCapturedResult(result) {
           for (let i = 0; i < result.items.length; i++) {
             if (result.items[i].type === Dynamsoft.Core.EnumCapturedResultItemType.CRIT_ORIGINAL_IMAGE) continue;
             const points = result.items[i].location.points;
-            const quad = new Dynamsoft.DCE.DrawingItem.QuadDrawingItem({ points });
+            const quad = new Dynamsoft.DCE.QuadDrawingItem({ points });
             quads.push(quad);
             layer.addDrawingItems(quads);
           }
@@ -560,11 +558,11 @@ async function restartDetecting() {
 You can also test the code above at [https://jsfiddle.net/DynamsoftTeam/](https://jsfiddle.net/DynamsoftTeam/L4m7r1db/)
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://github.com/Dynamsoft/document-normalizer-javascript-samples/blob/v2.0.21/hello-world/hello-world.html" title="Code in Github" style="text-decoration:none;">
+  <a target="_blank" href="https://github.com/Dynamsoft/document-normalizer-javascript-samples/blob/v2.2.10/hello-world/hello-world.html" title="Code in Github" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>
   &nbsp;
-  <a target="_blank" href="https://https://jsfiddle.net/DynamsoftTeam/L4m7r1db/" title="Run via JSFiddle">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/L4m7r1db/" title="Run via JSFiddle">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
